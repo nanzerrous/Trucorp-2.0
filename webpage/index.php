@@ -12,6 +12,7 @@
      <th> Kantor </th>
     </tr>
     <?php
+        $count =0;
         $conn = mysqli_connect("127.0.0.1" , "root" , "adam" ,"Trucorp");
         if ($conn-> connect_error) {
             die("Connection Failed:" . $conn-> connect_error);
@@ -21,6 +22,7 @@
         $result = $conn-> query($sql);
 
         if ($result-> num_rows > 0){
+            $count++;
             while ($row = $result-> fetch_assoc()) {
                 echo "<tr><td>" . $row["ID"] . "</td><td>" . $row["Nama"] . "</td><td>" . $row["Kantor"] . "</td></tr><br>";
             }
@@ -30,8 +32,9 @@
         else{
             echo "0 result";
         }
+        echo "<br>";
+        echo " total jumlah user yang ada di database : " + $count + " user";
         $conn->close();
-
     ?>
 
 </table>
