@@ -22,9 +22,9 @@
         $result = $conn-> query($sql);
 
         if ($result-> num_rows > 0){
-            $count++;
             while ($row = $result-> fetch_assoc()) {
-                echo "<tr><td>" . $row["ID"] . "</td><td>" . $row["Nama"] . "</td><td>" . $row["Kantor"] . "</td></tr><br>";
+                $count++
+		echo "<tr><td>" . $row["ID"] . "</td><td>" . $row["Nama"] . "</td><td>" . $row["Kantor"] . "</td></tr><br>";
             }
             echo "</table>";
         }
