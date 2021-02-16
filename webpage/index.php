@@ -23,7 +23,7 @@
 
         if ($result-> num_rows > 0){
             while ($row = $result-> fetch_assoc()) {
-                $count++
+                $count++;
 		echo "<tr><td>" . $row["ID"] . "</td><td>" . $row["Nama"] . "</td><td>" . $row["Kantor"] . "</td></tr><br>";
             }
             echo "</table>";
