@@ -33,7 +33,7 @@
             echo "0 result";
         }
         echo "<br>";
-        echo "Total jumlah user yang ada di database : " . $count . " user" ;
+        echo "Total jumlah user yang ada di database : " . $count . " user(s)" ;
         $conn->close();
     ?>
 
